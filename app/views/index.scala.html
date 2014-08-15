@@ -1,0 +1,21 @@
+@(title: String)
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>@title</title>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.at("extjs/packages/ext-theme-neptune/build/resources/ext-theme-neptune-all.css")">
+        <script type="text/javascript" src="@routes.Assets.at("extjs/bootstrap.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("extjs/ext-locale-zh_CN.js")"></script>
+    </head>
+    <body>
+        <!--cript type="text/javascript" src="@routes.Assets.at("extjs/application/app.js")"></script-->      
+        <script type="text/javascript">
+
+        Ext.onReady(function(){
+        	 Ext.Msg.alert("ExtJS", "Hello ExtJS");
+        });
+        </script>  
+    </body>
+</html>
