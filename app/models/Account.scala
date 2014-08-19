@@ -2,6 +2,7 @@ package models
 
 
 import scala.slick.jdbc.GetResult
+import utils.Page
 
 /**
  * Created by Administrator on 2014/8/7.
@@ -26,11 +27,10 @@ object Account extends BaseRepository[Account] {
       queryList(sql= "select * from t_account")
     }
 
-    def accountListWithPage(currPage:Int,pageSize:Int):Seq[Account]={
-      val sql = "select * from t_account where username = ? limit ?"
-      queryList(sql,Tuple2("bb",2))
+    def accountListWithPage(page:Page):Seq[Account]={
+      val sql = "select * from t_account limit ?,?"
+      queryList(sql,(page.getStart(),page.pageSize))
     }
-
 
 
 }

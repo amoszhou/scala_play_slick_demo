@@ -11,4 +11,4 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 #帐户模块
 
-GET         /accounts              controllers.AccountController.listAll
+GET         /accounts              controllers.AccountController.listAll(currPage: Int, pageSize: Int)
